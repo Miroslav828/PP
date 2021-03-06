@@ -76,12 +76,12 @@ if (b5 > b1 && b5 > b2 && b5 > b3 && b5 > b4){console.log (b5)}
 sort three numbers.*/
 
 var c1 = 8
-var c2 = 17
+var c2 = 6
 var c3 = 61
 
-if (c1 > c2 && c2 > c3){console.log (c1, c2, c3)}
-if (c1 > c3 && c3 > c2){console.log (c1, c3, c2)}
-if (c2 > c1 && c1 > c3){console.log (c2, c1, c3)}
-if (c2 > c3 && c3 > c1){console.log (c2, c3, c1)}
-if (c3 > c1 && c1 > c2){console.log (c3, c1, c2)}
-if (c3 > c2 && c2 > c1){console.log (c3, c2, c1)}
+if (c1 >= c2 && c2 >= c3){console.log (c1, c2, c3)}
+if (c1 >= c3 && c3 >= c2){console.log (c1, c3, c2)}
+if (c2 >= c1 && c1 >= c3){console.log (c2, c1, c3)}
+if (c2 >= c3 && c3 >= c1){console.log (c2, c3, c1)}
+if (c3 >= c1 && c1 >= c2){console.log (c3, c1, c2)}
+if (c3 >= c2 && c2 >= c1){console.log (c3, c2, c1)}
