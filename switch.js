@@ -253,7 +253,11 @@ switch (c) {
         console.log (a - b)
         break;
     case '*':
-        console.log (a * b)
+        if (b === 0){
+         console.log ("b cant be 0")   
+        }
+        else{
+        console.log (a * b)}
         break;
     case '/':    
         console.log (a / b)
