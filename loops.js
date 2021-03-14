@@ -79,11 +79,39 @@ console.log(sum1);
 
 // 7. 
 
+var students = [["David", 80], ["Marko", 77], ["Dany", 88], ["John", 95], ["Thomas", 68]];
+var sum = 0;
+
+for (i = 0; i < students.length; i++){
+    sum = sum + students [i][1];
+    var average = sum/students.length;
+}
+
+if (average < 60){
+    console.log ('average mark is', average);
+}
+    else if (average <= 70){
+        console.log ('Grade is D');
+    }
+    else if (average <=80){
+        console.log ('Grade mark is C'); 
+    }
+    else if (average <= 90){
+        console.log ('Grade is B');
+    }
+    else if (average <=100){
+        console.log ('Grade mark is A'); 
+    }
+
+
+
 // 8. Write a program that uses console.log to print all the numbers from 1 to 100, with two
 // exceptions. For numbers divisible by 3, print "Fizz" instead of the number, and for numbers
 // divisible by 5 (and not 3), print "Buzz" instead. When you have that working, modify your
 // program to print "FizzBuzz", for numbers that are divisible by both 3 and 5 (and still print
 // "Fizz" or "Buzz" for numbers divisible by only one of those).
+
+
 
 // prva verzija
  

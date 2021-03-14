@@ -98,21 +98,23 @@ console.log(sum);
 // Output: The array isn’t symmetric.
 
 var array = [2, 4, -2, 7, -2, 4, 2];
+var arraySim =[];
+var count = 0;
 for (i = 0; i < array.length; i++){
-    if (array[i] === array[array.length-1 - i]){
-        console.log('jeste');  
+    arraySim[arraySim.length] = array [array.length-1-i];
     }
-    else console.log('nije')
-}
 
-var array = [3, 4, 12, 8];
 for (i = 0; i < array.length; i++){
-    if (array[i] === array[array.length-1 - i]){
-        console.log('jeste');  
-    }
-    else console.log('nije')
+    if (array[i] === arraySim [i]){
+    count++;
 }
-
+}
+    if (count === array.length){
+        console.log('symetric');
+    }
+    else {
+        console.log('not symetric');
+    }
 
 //9. Write a program that deletes a given element e from the array a.
 // Input: e = 2, a = [4, 6, 2, 8, 2, 2]
@@ -121,13 +123,16 @@ for (i = 0; i < array.length; i++){
 
 var a = [4, 6, 2, 8, 2, 2];
 var e = 2;
+var newArray = [];
 
 for (i = 0; i < a.length; i++){
-    if (e === a[i]){
-        delete a[i];
+    if (a[i] !== e){
+        newArray [newArray.length] = a[i];
     }
 }
-console.log(a);
+console.log(newArray);
+
+
 
 //8. Write a program that concatenates two arrays.
 //Input arrays: [4, 5, 6, 2], [3, 8, 11, 9]
@@ -154,6 +159,11 @@ var a = [4, 5, 6, 2];
 var b = [3, 8, 11, 9];
 var c = [];
 
+for (i = 0; i < a.length; i++){
+    c[c.length] = a[i];
+    c[c.length] = b[i];
+}
+console.log(c);
 
 // 10. Write a program that inserts a given element e on the given position p in the array a. If
 // the value of the position is greater than the array length, print the error message.
@@ -163,18 +173,23 @@ var c = [];
 var a = [2, -2, 33, 10, 12, 5, 8];
 var e = 78;
 var p = 3;
+var b= [];
 
-if(p > a.length){
-    console.log ('greska');
-}
-else{
-for (i=0 ; i < a.length; i++){
-    if (i === p){
-        a[i] = e; 
-        console.log(a)  ;
+
+    if (p < a.length){
+        for (i = 0; i < a.length && i <= p; i++){
+           if (p === i){
+               b[i] = e;
+          }
+          else {
+              b[i] = a[i];
+          }
+        }
+        for (var j = 0; j < a.length - p; j++) {
+            b[b.length] = a[p+j];
     }
+    console.log('The new array is: ' + b);
 }
+else {
+    console.log('Position error.');
 }
-
-
-   
