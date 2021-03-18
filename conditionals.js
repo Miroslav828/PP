@@ -7,8 +7,9 @@ var a = 5
 var b = 10
 if (a > b) {
     console.log(a,' je veci broj')
+} else {
+    console.log(b,' je veci broj')
 }
-else {console.log(b,' je veci broj')}
 
 /* Write a program to check if the
 number is divisible by 2. If it
@@ -17,8 +18,11 @@ odd.*/
 
 
 var c = 3
-if (c % 2 === 0){console.log ('even')}
-else {console.log ('odd')}
+if (c % 2 === 0){
+    console.log ('even')
+} else {
+    console.log ('odd')
+}
 
 /*Write a program to check if the
 number is divisible by 3 and 5.
@@ -39,8 +43,11 @@ specified sign.*/
 var a1 = 3
 var a2 = 7
 var a3 = 2
-if (a1 * a2 *a3 <0){console.log ('the sign is -')}
-else {console.log('the sign is +')}
+if (a1 * a2 *a3 <0){
+    console.log ('the sign is -')
+} else {
+    console.log('the sign is +')
+}
 
 /*Write a program to check if the
 variable is a number. If it’s a
@@ -51,8 +58,13 @@ result, if not, show “X”*/
 
 var t = 20
 if (typeof t === 'number'){
-    if (t%2 === 0){console.log ( t,'/ 2','=' ,t/2)}
-    else {console.log ("X")}}
+    if (t%2 === 0){
+        console.log ( t,'/ 2','=' ,t/2)
+} else {
+    
+console.log ("X")
+}
+}
 
 
  /*Write a conditional statement to

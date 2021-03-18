@@ -142,10 +142,10 @@ switch (month) {
 //season it is. All inputs different from 1-12 output a message explaining that input must be a
 //number between 1 and 12.
 
-month = 9;
+month = 1;
 
 switch (month) {
-    case 1:
+    case 1:    
     case 2:
     case 3:  
     console.log ('its Winter time')
@@ -161,7 +161,7 @@ switch (month) {
     console.log ('its Summer time')
         break;
     case 10:
-    case 111:
+    case 11:
     case 12:  
     console.log ('its Autumn time')
         break;
@@ -204,7 +204,7 @@ switch (letter) {
 //number of cities. Input different from the listed cities should output a message 'Please
 //choose a different city';.
 
-var city = 3;
+var city = 'Moscow';
 
 switch (city) {
     case 'Moscow':

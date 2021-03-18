@@ -116,6 +116,19 @@ for (i = 0; i < array.length; i++){
         console.log('not symetric');
     }
 
+    //druga verzija
+
+    var arr = [22, 2, 5, 55, 5, 4, 22];
+    var isSym = true;
+    var start = 0;
+    var end = arr.length -1;
+for (start = 0, end = arr.length - 1; start < end; start++, end--) {
+	if (arr[start] !== arr[end]) {
+		isSym = false;
+	}
+}
+console.log(isSym ? "symetric" : "not symetric");
+
 //9. Write a program that deletes a given element e from the array a.
 // Input: e = 2, a = [4, 6, 2, 8, 2, 2]
 
@@ -172,7 +185,7 @@ console.log(c);
 
 var a = [2, -2, 33, 10, 12, 5, 8];
 var e = 78;
-var p = 3;
+var p = 10;
 var b= [];
 
 
@@ -193,3 +206,62 @@ var b= [];
 else {
     console.log('Position error.');
 }
+// druga varijanta
+
+var e=78;
+var p=3;
+var a=[2, -2, 33, 12, 5, 8];
+if(p<a.length && p>=0){
+
+	for(j=a.length; j>p; j--){
+		a[j]=a[j-1];
+	}//for closed
+
+}else{
+console.log("error");
+}//if cosed
+a[p]=e;
+console.log(a);
+// treca varijanta
+
+var arr = [22, 2, 5, 55, 5];
+var e = 78;
+var p = 3;
+var newArray = [];
+for (var i = 0; i < arr.length; i++) {
+	if (i === p) {
+		newArray[p] = e;
+	}
+	newArray[newArray.length] = arr[i];
+}
+console.log(newArray);
+
+// 7. modifikacija
+
+// Write a program that intertwines two arrays. 
+// Input arrays: [4, 5, 6, 2], [3, 8, 11, 9]
+// Output array: [4, 3, 5, 8, 6, 11, 2, 9]
+var arrA = [4, 5, 6, 2]
+var arrB = [3, 8, 11, 9, 3]
+var maxlength = arrA.length > arrB.length ? arrA.length : arrB.length
+var arrResult = []
+for (var i = 0; i < maxlength; i++) {
+	if (arrA[i]) {
+		arrResult[arrResult.length] = arrA[i];
+	}
+	if (arrB[i]) {
+		arrResult[arrResult.length] = arrB[i];
+	}
+}
+console.log(arrResult);
+
+// 8 modifikacija
+
+var a=[4, 5, 6, 2];
+var b=[3, 8, 11, 9];
+var c=[];
+for(i=0; i<a.length; i++){
+    c[i]=a[i];
+    c[i+a.length]=b[i];
+}
+console.log(c)

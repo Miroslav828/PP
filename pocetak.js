@@ -19,7 +19,7 @@ var age = 38
 console.log (age > 120)
 console.log(age < 0)
 
-var speed = 60
+var speed = 80
 console.log(60 <= speed && speed <= 120)
 
 var p = true; var q = false;
