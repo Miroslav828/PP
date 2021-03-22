@@ -79,7 +79,7 @@ function drawing (a){
     }
     return arr;
 }
-var result = drawing(6);
+var result = drawing(10);
 console.log(result);
 
 
@@ -100,14 +100,15 @@ function drawing2 (a, b, c){
         d+= '*';
     }
     d+= '\n';
-    for  (i = 0; i <= c; i++){
+    for  (i = 1; i <= c; i++){
         d+= '*'
     }
     return d;
 }
 
-var result = drawing2 (3, 5, 7);
+var result = drawing2 (1, 7, 5);
 console.log(result);
+
 
 
 // 7. Write a program that calculates a number of digits of a given number.
@@ -188,3 +189,4 @@ function dodavanje(string, a){
 }
 var result = dodavanje ('prst', 5);
 console.log (result);
+
