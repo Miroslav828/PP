@@ -160,6 +160,20 @@ function sum1OfOdd (arr){
 var result = sum1OfOdd ([1,2,3,4,5,6]);
 console.log (result);
 
+// option 2
+
+function sum2OfOdd (arr){
+    var suma2 = 0;
+    for (i = 0; i < arr.length; i = i + 2){
+         suma2 += arr[i];
+        }
+        return suma2;
+    }
+    
+   
+   var result = sum2OfOdd ([1, 1, 1, 1, 1, 1]);
+   console.log (result);
+
 //10. Write a program that calculates the number of appearances of a letter a in a given string.
 // Modify the program so it calculates the number of both letters a and A.
 
