@@ -109,6 +109,20 @@ function drawing2 (a, b, c){
 var result = drawing2 (1, 7, 5);
 console.log(result);
 
+// option 2
+
+function makeChart() {
+	var result = '';
+	for (var i = 0; i < arguments.length; i++) {
+		for (var j = 0; j < arguments[i]; j++) {
+			result += '*';
+		} 
+		result += '\n';
+	}
+	return result;
+}
+console.log(makeChart(6,7,8,9))
+
 
 
 // 7. Write a program that calculates a number of digits of a given number.
@@ -146,6 +160,7 @@ var result = nrOfRepeat (niz, 2);
 console.log (result);
 
 // 9. Write a program that calculates the sum of odd elements of a given array.
+// option 1 - suma elemenata koji su neparni 
 
 function sum1OfOdd (arr){
  var suma1 = 0;
@@ -160,7 +175,8 @@ function sum1OfOdd (arr){
 var result = sum1OfOdd ([1,2,3,4,5,6]);
 console.log (result);
 
-// option 2
+// option 2 - suma neparnih elemenata
+
 
 function sum2OfOdd (arr){
     var suma2 = 0;
@@ -204,3 +220,5 @@ function dodavanje(string, a){
 var result = dodavanje ('prst', 5);
 console.log (result);
 
+// pitanja, definisanje var, unutar ili iznad function
+// 

@@ -72,7 +72,7 @@ for (i=0; i < array1.length; i++){
 
 var sum1 = 0;
 for (var c = 1; c <= 20; c++){
-    var d = c * c;
+    var d = c * c;  // moze i samo sum1 += c * c
     sum1 += d ;
 }
 console.log(sum1);
