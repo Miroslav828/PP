@@ -2,7 +2,7 @@
 //1 to 7. Print output in console.
 //For input 1, output should be “Monday”.
 
-var day = 1
+var day = 2
 
 switch (day) {
     case 1:
@@ -10,7 +10,7 @@ switch (day) {
         break;
     case 2:
         console.log('utorak')
-        break;
+        
     case 3:
         console.log('sreda')
         break;
@@ -266,3 +266,4 @@ switch (c) {
         console.log ('greska')
         break;
 }
+
