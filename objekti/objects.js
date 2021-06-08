@@ -32,9 +32,9 @@ function CreateObject (desc, progDesc, gitRep, boolSt) {
     return {
         description: desc,
         programmingLanguage: progDesc,
-        
+        gitRepository: gitRep,
         booleanStatus: boolSt,
-        gitRepository: (function(){
+        printRepository: (function(){
           return gitRep;
         })(),
         ifJS: (function(){
@@ -74,15 +74,66 @@ function recipe (nam, cuisine, compl, ingredients, prepTime, instruction){
         preparedIn15Min: function(){
             return prepTime < 15;
         },
-        changeTypeToValue: function(){
-            return 
+        changeTypeOfCuisine: function(value){
+            return this.typeOfCuisine = value ;  
         },
-        
+        newListOfIngredients: function(remove){
+            var newList = [];
+            for (var i = 0; i <ingredients.length; i++){
+                if (ingredients[i] !== remove ){
+                    newList[newList.length] = ingredients[i];
+                }    
+            } return this.listOfIngredients = newList;
 
+        }, 
     }
 }
 
-
-var recept = recipe('palacinke','domaca', 1, ['brasno, secer, mleko, jaje'], 10, 'mix everything');
+var recept = recipe('palacinke','domaca', 1, ['brasno', 'mleko', 'secer', 'jaja'], 10, 'mix everything');
 console.log (recept);
-recept.printIngredients()
+
+recept.changeTypeOfCuisine('italijanska');
+console.log (recept);
+
+recept.newListOfIngredients('mleko');
+console.log(recept);
+
+
+
+// drugi nacin, constructor function 
+
+function Recipe(nam, cuisine, compl, ingredients, prepTime, instruction){
+    this.name = nam;
+    this.typeOfCuisine = cuisine;
+    this.complexity = compl;
+    this.listOfIngredients = ingredients;
+    this.preparingTime = prepTime;
+    this.preparingInstruction = instruction;
+    this.printIngredients = function(){ 
+      console.log(this.listOfIngredients)
+    };
+    this.preparedIn15Min = function(){
+        return prepTime < 15;
+    };
+    this.changeTypeOfCuisine = function(value){
+         this.typeOfCuisine = value ;  
+    };
+    this.newListOfIngredients = function(remove){
+        var newList = [];
+        for (var i = 0; i <ingredients.length; i++){
+            if (ingredients[i] !== remove ){
+                newList[newList.length] = ingredients[i];
+            }    
+        }  this.listOfIngredients = newList;
+
+    };
+}
+
+var recept = new Recipe('plazma torta', 'globalna', 3, ['secer', 'plazma', 'slag', 'margarin', 'tajni sastojak'], 60, 'pomesati, umutiti, poredjati')
+
+console.log(recept.name);
+console.log(recept);
+
+recept.changeTypeOfCuisine('domaca');
+
+console.log(recept);
