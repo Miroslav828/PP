@@ -6,7 +6,7 @@
         this.name = name;
         this.getData = function () {
             var firstLetter = this.name.charAt(0);
-            var lastLetter = this.name.charAt(name.length - 1)
+            var lastLetter = this.name.charAt(name.length - 1);
             var result = firstLetter + lastLetter;
             return result.toUpperCase();
         }
@@ -20,7 +20,7 @@
         this.genre = genre;
         this.mLength = length;
         this.getDataMovie = function () {
-            return this.title + ', ' + this.mLength + ', ' + this.genre.getData()
+            return this.title + ', ' + this.mLength + ', ' + this.genre.getData();
         }
     }
 
@@ -66,7 +66,7 @@
     var prviFilm = new Movie('Otpisani', movie1, 200);
     var drugiFilm = new Movie('film', movie1, 100);
     console.log(prviFilm);
-    console.log(prviFilm.GetDataMovie());
+   console.log(prviFilm.getDataMovie());
     var program1 = new Program('May 29 2021');
     console.log(program1.addMovie(prviFilm));
     console.log(program1.listOfmovies);
