@@ -69,3 +69,5 @@ manager1.changeDepartment('zeleznicki');
 manager1.getDepartment();
 employee1.increaseSalary();
 employee1.getSalary();
+
+

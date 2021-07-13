@@ -76,7 +76,7 @@ function Airport (){
 }
 
 
-var person1 = new Person ('Miroslav', 'Madic');
+var person1 = new Person ('Pera', 'Peric');
 var seat1 = new Seat ();
 var passenger1 = new Passenger(person1, seat1);
 var belgradeTivat = new Flight ('Belgrade - Tivat', 'Jun 16 2021');

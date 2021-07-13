@@ -102,6 +102,10 @@ function addMovieToProgram() {
       if (li.textContent === oldDataProgram) {
          li.textContent = selectedProgram.getData();
       }
+
+      console.log(programValue, movieValue);
+      console.log(selectedMovie, selectedProgram);
+
    })
 }
 
